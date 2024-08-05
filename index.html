@@ -1,0 +1,92 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dev Indés</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+  <style>
+    .hook {
+      text-align: center;
+    }
+  </style>
+</html>
+
+<body>
+  <main class="container">
+    <div class="hook">
+      <h1>Tu es <mark>dev indé</mark> ?</h1>
+      <p>Partage ta dernière expérience en tant que freelance.</p>
+    </div>
+    <p>
+      Ainsi tu aideras les autres développeurs à mieux préparer leur offre.
+      Merci à toi !
+    </p>
+    <section>
+      <form method="post">
+        <label for="mission-title">Titre de la mission :</label><br />
+        <input
+          type="text"
+          id="mission-title"
+          name="mission_title"
+          required
+        /><br /><br />
+
+        <label for="mission-description">Description de la mission :</label
+        ><br />
+        <textarea
+          id="mission-description"
+          name="mission_description"
+          rows="4"
+          cols="50"
+          required
+        ></textarea
+        ><br /><br />
+
+        <label for="technologies-used"
+          >Technologies utilisées (séparées par des virgules ex: Python, Django,
+          Redis...) :</label
+        ><br />
+        <input
+          type="text"
+          id="technologies-used"
+          name="technologies_used"
+          required
+        /><br /><br />
+
+        <label for="duration">Durée de la mission (en mois) :</label><br />
+        <input
+          type="number"
+          id="duration"
+          name="duration"
+          required
+        /><br /><br />
+
+        <label for="client-type">Type de client :</label><br />
+        <select id="client-type" name="client_type" required>
+          <option value="startup">Startup</option>
+          <option value="small-business">Petite entreprise</option>
+          <option value="medium-business">Entreprise moyenne</option>
+          <option value="large-corporation">Grande entreprise</option>
+          <option value="other">Autre</option></select
+        ><br /><br />
+
+        <label for="rate">Tarif journalier</label><br />
+        <input type="number" id="rate" name="rate" required /><br /><br />
+
+        <input type="submit" value="Soumettre" />
+      </form>
+    </section>
+    <section>
+      <form method="post">
+        <label for="search">Recherche</label>
+        <input type="search" name="search" value="search" />
+      </form>
+    </section>
+  </main>
+</body>
