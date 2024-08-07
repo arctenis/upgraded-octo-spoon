@@ -18,10 +18,10 @@ Pas besoin de frameworks frontend. Peut-être HTMX et AlpineJS si besoin.
 
 J'utilise PicoCSS pour la mise en forme.
 
-1. [ ] Initialiser un projet Django
-2. [ ] Créer l'application `missions`
-3. [ ] Créer la vue pour le formulaire
+1. [X] Initialiser un projet Django
+2. [X] Créer l'application `missions`
 4. [ ] Créer le formulaire
+3. [ ] Créer la vue pour le formulaire
 5. [ ] Créer la vue pour l'expérience affichée
 6. [ ] Créer la vue pour la recherche
 7. [ ] Coder le template de base
