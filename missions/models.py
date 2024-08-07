@@ -3,6 +3,7 @@ from django.db import models
 
 class Mission(models.Model):
     title = models.CharField(max_length=100)
+    experience_level = models.IntegerField()  # in years
     client_type = models.CharField(
         max_length=1,
         choices=[
