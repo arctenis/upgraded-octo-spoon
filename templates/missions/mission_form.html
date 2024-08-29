@@ -1,4 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-  {{ mission_form.as_p }}
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ mission_form.as_p }}
+    <input type="submit" value="Partager mon expérience" />
+  </form>
+  {% include "missions/random_mission.html" %}
 {% endblock content %}
