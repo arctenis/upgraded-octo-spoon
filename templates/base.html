@@ -10,45 +10,189 @@
       crossorigin="anonymous"
     ></script>
     <style>
+      /* Importation d'une police pixellisée */
+      @import url("https://fonts.cdnfonts.com/css/thegoodmonolith");
+
+      :root {
+        --main-color: #34332f;
+        --secondary-color: #efe9db;
+        --tertiary-color: #b5d8c2;
+        --background-color: #f0d095;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
       body {
-        font-family: Arial, sans-serif;
+        background: linear-gradient(
+          45deg,
+          var(--background-color) 25%,
+          var(--secondary-color) 25%,
+          var(--secondary-color) 50%,
+          var(--background-color) 50%,
+          var(--background-color) 75%,
+          var(--secondary-color) 75%,
+          var(--secondary-color) 100%
+        );
+        background-size: 300px 300px;
+        background-attachment: fixed;
+        color: var(--main-color);
+        font-family: "thegoodmonolith", monospace;
+        font-size: 1.5em;
         margin: 0;
-        padding: 0;
-      }
-      header {
-        background-color: #f8f9fa;
-        padding: 1rem;
-        text-align: center;
-      }
-      main {
-        padding: 1rem;
-      }
-      footer {
-        background-color: #f8f9fa;
-        padding: 1rem;
+        padding: 20px;
+        box-sizing: border-box;
         text-align: center;
       }
 
-      .container {
+      #container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
         margin: 0 auto;
+      }
+
+      /* Centrer le contenu sur desktop, plein écran sur mobile */
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        border: 2px solid var(--main-color);
+        padding: 10px;
+        box-shadow: 5px 5px 0 #111; /* Ombre portée angulaire noire */
+      }
+
+      p {
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: var(--main-color);
+        animation: blink 2s infinite;
+      }
+
+      section {
+        border: 2px solid var(--main-color);
+        background-color: var(--secondary-color);
+        box-shadow: 5px 5px 0 var(--main-color);
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      /* Formulaire */
+      form {
+        padding: 20px;
+      }
+
+      /* Champs de formulaire */
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="url"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: 2px solid var(--main-color);
+        box-sizing: border-box;
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        font-family: "thegoodmonolith", monospace;
+        font-size: 1em;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="number"]:focus,
+      input[type="url"]:focus,
+      textarea:focus,
+      select:focus {
+        border: 2px solid var(--main-color);
+        box-sizing: border-box;
+      }
+
+      input[type="submit"],
+      button {
+        padding: 10px 20px;
+        border: 2px solid #111;
+        cursor: pointer;
+        box-shadow: 5px 5px 0 #111; /* Ombre portée angulaire noire */
+        background-color: var(--tertiary-color);
+        font-family: "thegoodmonolith", monospace;
+        font-size: 0.8em;
+      }
+
+      input[type="submit"]:hover,
+      button:hover {
+        /* transform: translate(-2px, -2px); */
+        /* box-shadow: 7px 7px 0 #000; */
+        background-color: var(--background-color);
+      }
+
+      input[type="submit"]:active,
+      button:active {
+        transform: translate(5px, 5px);
+        box-shadow: 0 0 0;
+      }
+
+      footer {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        border: 2px solid var(--main-color);
+        padding: 20px;
+        box-shadow: 5px 5px 0 #111; /* Ombre portée angulaire noire */
+      }
+
+      /* Responsiveness */
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+
+        main {
+          width: 100%;
+        }
       }
     </style>
   </head>
-  <body class="container" style="max-width: 1000px">
-    <header>
-      <h1>Dev Indés</h1>
-      <p>
-        Partage ta dernière expérience et aide les autres développeurs
-        indépendants indépendants.
-      </p>
-      <p>
-        Consulte les expériences d'autres développeurs pour t'aider à formuler
-        ton devis.
-      </p>
-    </header>
-    <main>{% block content %} {% endblock content %}</main>
+  <body>
+    <div class="container">
+      <main>
+        <h1>Dev Indés</h1>
+        <section>
+          <p>
+            <strong>Partage</strong> ta dernière expérience et
+            <strong>aide</strong> les autres développeurs indépendants.
+          </p>
+          <p>
+            Consulte les expériences d'autres développeurs pour t'<strong
+              >inspirer</strong
+            >
+            et te <strong>motiver</strong>.
+          </p>
+        </section>
+        {% block content %} {% endblock content %}
+      </main>
+    </div>
+
     <footer>
-      <p>Fait rapidement par <a href="#">Nico</a>.</p>
+      <p>Fait rapidement par <a href="#">Nicolas</a>.</p>
       <p>Contacte-moi pour des suggestions d'améliorations.</p>
     </footer>
   </body>

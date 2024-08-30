@@ -24,25 +24,29 @@ J'utilise PicoCSS pour la mise en forme.
 4. [X] Créer la vue pour le formulaire
 5. [X] Créer la vue pour l'expérience affichée
 6. [X] Afficher la date de l'expérience de façon plus lisible
-8. [X] Afficher le type d'entreprise, la valeur de la liste 'choices'
-10. [X] Coder le template de base
-11. [X] Coder le template pour le formulaire
-13. [X] Coder le template partiel pour l'affichage de l'expérience
-15. [X] Coder le modèle 'mission'
-16. [X] Ajouter la sauvegarde de données dans la vue du formulaire
-19. [X] Ajouter HTMX
-21. [X] Modifier le design avec du pur CSS
-14. [ ] Coder le template partiel pour les remerciements
-9. [ ] Créer la vue pour la recherche
-12. [ ] Coder le template pour la recherche
-7. [ ] Ajouter la stack technique au modèle
-17. [ ] Protéger la page admin avec honeypot
-18. [ ] Coder la recherche
-20. [ ] Coder le bouton "Une autre expérience"
-22. [ ] Coder une page responsive
-23. [ ] Améliorer le footer :
+7. [X] Afficher le type d'entreprise, la valeur de la liste 'choices'
+8. [X] Coder le template de base
+9. [X] Coder le template pour le formulaire
+10. [X] Coder le template partiel pour l'affichage de l'expérience
+11. [X] Coder le modèle 'mission'
+12. [X] Ajouter la sauvegarde de données dans la vue du formulaire
+13. [X] Ajouter HTMX
+14. [X] Modifier le design avec du pur CSS
+15. [X] Coder le bouton "Une autre expérience"
+16. [ ] Modifier les messages d'erreur du formulaire :
+	1. [ ] Traduire en français
+	2. [ ] Modifier le style
+17. [ ] Afficher un message de remerciements après l'envoi du formulaire (modal)
+18. [ ] Coder le template partiel pour les remerciements
+19. [ ] Créer la vue pour la recherche
+20. [ ] Coder le template pour la recherche
+21. [ ] Ajouter la stack technique au modèle
+22. [ ] Protéger la page admin avec honeypot
+23. [ ] Coder la recherche
+24. [ ] Coder une page responsive
+25. [ ] Améliorer le footer :
 		1. [ ] Ajouter un lien vers mon Linkedin
-24. [ ] Ajouter des tests
-25. [ ] Déployer :
+26. [ ] Ajouter des tests
+27. [ ] Déployer :
 		1. [ ] Github Actions
 		2. [ ] Render ou PythonAnywhere ou mon VPS

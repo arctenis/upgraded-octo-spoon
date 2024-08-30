@@ -2,9 +2,7 @@
   <h2>Une expérience partagée</h2>
   <p>Je suis {{ random_mission.title }} et j'ai {{ random_mission.experience_level }} années d'expérience.</p>
   <p>
-    J'ai travaillé avec un client de type {{ random_mission.get_client_type_display }} pour
-    une durée de {{ random_mission.duration }} jours avec un tarif journalier
-    s'élevant à {{ random_mission.daily_rate }} €.
+    J'ai travaillé avec un client de type {{ random_mission.get_client_type_display }} pour une durée de {{ random_mission.duration }} jours avec un tarif journalier s'élevant à {{ random_mission.daily_rate }} €. J'ai obtenu cette mission via {{ random_mission.get_contact_display }}.
   </p>
   <p>Description de la mission :</p>
   <p>{{ random_mission.description }}</p>
