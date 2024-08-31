@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Mission
+from .models import Mission, Technology, Language
 
 
 @admin.register(Mission)
@@ -20,3 +20,16 @@ class MissionAdmin(admin.ModelAdmin):
         "contact",
         "experience_level",
     ]
+    search_fields = ["client_type", "daily_rate", "contact", "experience_level"]
+
+
+@admin.register(Technology)
+class TechnologyAdmin(admin.ModelAdmin):
+    list_display = ["name"]
+    search_fields = ["name"]
+
+
+@admin.register(Language)
+class LanguageAdmin(admin.ModelAdmin):
+    list_display = ["name"]
+    search_fields = ["name"]

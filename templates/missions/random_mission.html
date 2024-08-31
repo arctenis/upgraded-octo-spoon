@@ -2,10 +2,29 @@
   <h2>Une expérience partagée</h2>
   <p>Je suis {{ random_mission.title }} et j'ai {{ random_mission.experience_level }} années d'expérience.</p>
   <p>
-    J'ai travaillé avec un client de type {{ random_mission.get_client_type_display }} pour une durée de {{ random_mission.duration }} jours avec un tarif journalier s'élevant à {{ random_mission.daily_rate }} €. J'ai obtenu cette mission via {{ random_mission.get_contact_display }}.
+    J'ai travaillé avec un client de type {{ random_mission.get_client_type_display }} pour une durée de {{ random_mission.duration }} jours avec un tarif journalier s'élevant à {{ random_mission.daily_rate }} €. J'ai obtenu cette mission via
+    {% if random_mission.contact == "1" %}
+      mon réseau.
+    {% elif random_mission.contact == "2" %}
+      Linkedin.
+    {% elif random_mission.contact == "3" %}
+      une plateforme de recrutement de freelances.
+    {% endif %}
   </p>
   <p>Description de la mission :</p>
   <p>{{ random_mission.description }}</p>
+  <p>Technologies utilisées :</p>
+  <ul>
+    {% if random_mission.stack_d %}<li>{{ random_mission.stack_d }}</li>{% endif %}
+    {% if random_mission.stack_e %}<li>{{ random_mission.stack_e }}</li>{% endif %}
+    {% if random_mission.stack_f %}<li>{{ random_mission.stack_f }}</li>{% endif %}
+  </ul>
+  <p>Langages :</p>
+  <ul>
+    {% if random_mission.language_a %}<li>{{ random_mission.language_a }}</li>{% endif %}
+    {% if random_mission.language_b %}<li>{{ random_mission.language_b }}</li>{% endif %}
+  </ul>
+  {% if random_mission.personal_url %}<p>Mon site web : {{ random_mission.personal_url }}</p>{% endif %}
   <p>Expérience partagée le {{ random_mission.created_at|date:"d F Y" }}.</p>
   <button id="random"
           hx-get="/random/"

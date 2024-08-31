@@ -14,6 +14,12 @@ class MissionForm(forms.ModelForm):
             "description",
             "daily_rate",
             "contact",
+            "stack_a",
+            "stack_b",
+            "stack_c",
+            "language_a",
+            "language_b",
+            "personal_url",
         ]
         labels = {
             "title": "Titre",
@@ -23,4 +29,10 @@ class MissionForm(forms.ModelForm):
             "description": "Description",
             "daily_rate": "Taux journalier",
             "contact": "Contact",
+            "stack_a": "Techno",
+            "stack_b": "Techno",
+            "stack_c": "Techno",
+            "language_a": "Langage",
+            "language_b": "Langage",
+            "personal_url": "URL personnelle (site perso, linkedin, github...)",
         }
