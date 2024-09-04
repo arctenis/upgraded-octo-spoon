@@ -33,20 +33,20 @@ J'utilise PicoCSS pour la mise en forme.
 13. [X] Ajouter HTMX
 14. [X] Modifier le design avec du pur CSS
 15. [X] Coder le bouton "Une autre expérience"
-21. [X] Ajouter la stack technique au modèle
-16. [ ] Modifier les messages d'erreur du formulaire :
-	1. [ ] Traduire en français
-	2. [ ] Modifier le style
-17. [ ] Afficher un message de remerciements après l'envoi du formulaire (modal)
-18. [ ] Coder le template partiel pour les remerciements
-19. [ ] Créer la vue pour la recherche
-20. [ ] Coder le template pour la recherche
-22. [ ] Protéger la page admin avec honeypot
-23. [ ] Coder la recherche
-24. [ ] Coder une page responsive
-25. [ ] Améliorer le footer :
-		1. [ ] Ajouter un lien vers mon Linkedin
-26. [ ] Ajouter des tests
-27. [ ] Déployer :
-		1. [ ] Github Actions
-		2. [ ] Render ou PythonAnywhere ou mon VPS
+16. [X] Ajouter la stack technique au modèle
+17. [X] Modifier les messages d'erreur du formulaire :
+	1. [X] Traduire en français
+	2. [X] Modifier le style
+18. [X] Améliorer le footer :
+		1. [X] Ajouter un lien vers mon Linkedin
+19. [X] Protéger la page admin en changeant la route
+20. [X] Déployer :
+		1. [X] Render ou PythonAnywhere ou mon VPS
+21. [ ] Gérer les fichiers statiques avec Whitenoise
+22. [ ] Afficher un message de remerciements après l'envoi du formulaire (modal)
+23. [ ] Coder le template partiel pour les remerciements
+24. [ ] Coder la recherche :
+	1. [ ] Créer la vue pour la recherche
+25. [ ] Coder le template pour la recherche
+26. [ ] Coder une page responsive
+27. [ ] Ajouter des tests
