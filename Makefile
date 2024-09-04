@@ -25,5 +25,8 @@ collectstatic:
 check:
 	$(MANAGE) check --settings=core.settings.prod
 
+collect:
+	$(MANAGE) collectstatic --noinput --settings=core.settings.prod
+
 .PHONY: default
 default: local

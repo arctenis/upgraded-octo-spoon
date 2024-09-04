@@ -1,5 +1,5 @@
 <article id="random_mission">
-  <h2>Expérience partagée le {{ random_mission.created_at|date:"d F Y" }}.</h2>
+  <h2>{{ random_mission.created_at|date:"d F Y" }}.</h2>
   <p>Je suis {{ random_mission.title }} et j'ai {{ random_mission.experience_level }} années d'expérience.</p>
   <p>
     J'ai travaillé avec un client de type {{ random_mission.get_client_type_display }} pour une durée de {{ random_mission.duration }} jours avec un tarif journalier s'élevant à {{ random_mission.daily_rate }} €. J'ai obtenu cette mission via
@@ -8,7 +8,8 @@
     {% elif random_mission.contact == "2" %}
       Linkedin.
     {% elif random_mission.contact == "3" %}
-      une plateforme de recrutement de freelances.
+      une plateforme
+      de recrutement de freelances.
     {% endif %}
   </p>
   <p>Description de la mission :</p>
