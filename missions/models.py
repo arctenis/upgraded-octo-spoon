@@ -58,47 +58,17 @@ class Mission(models.Model):
             ("3", "Plateforme de Freelance (Malt, Comet, Creme de la Creme...)"),
         ],
     )
-    stack_a = models.ForeignKey(
+    stack = models.ManyToManyField(
         Technology,
-        on_delete=models.SET_NULL,
-        null=True,
         blank=True,
-        related_name="stack_a",
+        related_name="missions",
     )
-    stack_b = models.ForeignKey(
-        Technology,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="stack_b",
-    )
-    stack_c = models.ForeignKey(
-        Technology,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="stack_c",
-    )
-    language_a = models.ForeignKey(
+    languages = models.ManyToManyField(
         Language,
-        on_delete=models.SET_NULL,
-        null=True,
         blank=True,
-        related_name="language_a",
+        related_name="missions",
     )
-    language_b = models.ForeignKey(
-        Language,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="language_b",
-    )
-    personal_url = models.URLField(
-        max_length=200,
-        null=True,
-        blank=True,
-        error_messages={"invalid": "Doit être une URL valide"},
-    )
+    personal_url = models.URLField(max_length=200, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -33,6 +33,7 @@ J'utilise PicoCSS pour la mise en forme.
 13. [X] Ajouter HTMX
 14. [X] Modifier le design avec du pur CSS
 15. [X] Coder le bouton "Une autre expérience"
+21. [X] Ajouter la stack technique au modèle
 16. [ ] Modifier les messages d'erreur du formulaire :
 	1. [ ] Traduire en français
 	2. [ ] Modifier le style
@@ -40,7 +41,6 @@ J'utilise PicoCSS pour la mise en forme.
 18. [ ] Coder le template partiel pour les remerciements
 19. [ ] Créer la vue pour la recherche
 20. [ ] Coder le template pour la recherche
-21. [ ] Ajouter la stack technique au modèle
 22. [ ] Protéger la page admin avec honeypot
 23. [ ] Coder la recherche
 24. [ ] Coder une page responsive

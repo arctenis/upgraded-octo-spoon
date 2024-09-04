@@ -1,6 +1,8 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
   <section>
+    <img src="{% static 'missions/keyboard.png' %}" />
     <form action="" method="post">
       {% csrf_token %}
       {{ mission_form.as_p }}
